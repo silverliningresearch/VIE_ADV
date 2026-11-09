@@ -132,21 +132,22 @@ function selected_handler(val) {
   console.log('currentSearchQuestion: ', currentSearchQuestion);
 
   switch (currentSearchQuestion) {
-    case "Core_Q2": //Flight number
+    case "F2": //Flight number
       save_flight_value(currentSearchQuestion, val);
       $('.rt-btn.rt-btn-next').show(); 
       break;  
 
-    case "Core_Q6_2": //From Airport
-      save_airport_value(currentSearchQuestion, val);
+    case "F3": //Final Airport
+    case "F7_3": //If arriving VIE by plan: 
+    save_airport_value(currentSearchQuestion, val);
       $('.rt-btn.rt-btn-next').show(); 
       break;  
 
-    case "Core_Q6_3": //Postal code
-    case "Core_Q6_4": //Postal code    
-    case "Core_Q7_2": //Postal code    
-    case "Core_Q14": //Postal code    
-      //save_postal_code_value(currentSearchQuestion, val);
+
+    case "F7_4": //If arriving VIE by ground transport  
+    case "F13_1": //permanent residence?    
+     // case "Core_Q14": //Postal code    
+      save_postal_code_value(currentSearchQuestion, val);
       $('.rt-btn.rt-btn-next').show(); 
       break;  
 
@@ -160,12 +161,11 @@ function changed_handler(val) {
   console.log('changed_handler: ', val);
   console.log('currentSearchQuestion: ', currentSearchQuestion);
   switch (currentSearchQuestion) {
-    case "Core_Q6_3": //Postal code
-    case "Core_Q6_4": //Postal code    
-    case "Core_Q7_2": //Postal code    
-    case "Core_Q14": //Postal code     
+    case "F7_4": //Postal code
+    case "F13_1": //Postal code    
+
       save_postal_code_value(currentSearchQuestion, val);
-      $('.rt-btn.rt-btn-next').show(); 
+      // $('.rt-btn.rt-btn-next').show(); 
       break;     
 
     default:
