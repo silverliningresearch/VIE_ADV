@@ -49,22 +49,22 @@
             
             switch (api.fn.getCurrentPageIndex()) {
               case 3:
-                show_flight_search_box("Core_Q2"); //flight
+                show_flight_search_box("F2"); //flight Number
                 break;
-              case 11:
-                show_airport_search_box("Core_Q6_2"); ///From Airport
+              case 4:
+                show_airport_search_box("F3"); //Final Airport
                 break;
-              case 13:
-                 show_postal_code_search_box("Core_Q6_3"); //If arriving VIE by plan: 
-                break;                
               case 15:
-                 show_postal_code_search_box("Core_Q6_4"); //If arriving VIE by ground transport: 
+                 show_airport_search_box("F7_3"); //If arriving VIE by plan: 
+                break;                
+              case 17:
+                 show_postal_code_search_box("F7_4 "); //If arriving VIE by ground transport
                 break;
-              case 18:
-                show_postal_code_search_box("Core_Q7_2"); //place  mainly spend the trip
-                break;
-              case 29:
-                show_postal_code_search_box("Core_Q14"); //permanent residence?
+              // case 18:
+              //   show_postal_code_search_box("Core_Q7_2"); //place  mainly spend the trip
+              //   break;
+              case 28:
+                show_postal_code_search_box("F13_1 "); //permanent residence?
                 break;
 
 
