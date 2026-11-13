@@ -16,10 +16,26 @@ function save_airport_value(question, value) {
   console.log("question:", question);
   console.log("value:", value);
 
-  api.fn.answers({Core_Q6_2_AirportCode:   value.AirportCode}); 
-  api.fn.answers({Core_Q6_2_AirportName:   value.AirportName}); 
-  api.fn.answers({Core_Q6_2_CountryCode:   value.CountryCode}); 
-  api.fn.answers({Core_Q6_2_CountryName:   value.CountryName}); 
+  
+  switch (question) {
+    case "F3":
+      api.fn.answers({F3_AirportCode:   value.AirportCode}); 
+      api.fn.answers({F3_AirportName:   value.AirportName}); 
+      api.fn.answers({F3_CountryCode:   value.CountryCode}); 
+      api.fn.answers({F3_CountryName:   value.CountryName}); 
+      break;
+
+    case "F7_3":
+      api.fn.answers({F7_3_AirportCode:   value.AirportCode}); 
+      api.fn.answers({F7_3_AirportName:   value.AirportName}); 
+      api.fn.answers({F7_3_CountryCode:   value.CountryCode}); 
+      api.fn.answers({F7_3_CountryName:   value.CountryName}); 
+      break;
+
+    default:
+      break;
+  }
+
 
   console.log("save_airport_value  done!");
 }

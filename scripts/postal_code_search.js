@@ -7,7 +7,7 @@ function load_postal_codes_list(question) {
   postalCodeList = [];
 
   switch (question) {
-    case "Core_Q6_3":
+    case "F7_4":
       if (api.fn.answers().Core_Q6_3a == 3 ) {
         postalCodeList = JSON.parse(postalCodeGermany); 
       }
@@ -16,7 +16,7 @@ function load_postal_codes_list(question) {
         postalCodeList = JSON.parse(postalCodeAustria); //Austria
       }
       break;
-    case "Core_Q6_4":
+    case "F13_1":
       if (api.fn.answers().Core_Q6_4a == 3 ) {
         postalCodeList = JSON.parse(postalCodeGermany); 
       }
@@ -25,27 +25,7 @@ function load_postal_codes_list(question) {
         postalCodeList = JSON.parse(postalCodeAustria); //Austria
       }
       break;      
-    case "Core_Q7_2":
-      if (api.fn.answers().Core_Q7_2 == 3 ) {
-        postalCodeList = JSON.parse(postalCodeGermany); 
-      }
-      else
-      {
-        postalCodeList = JSON.parse(postalCodeAustria); //Austria
-      }
-      break;         
-    case "Core_Q14":      
-      var country = api.fn.answers().Core_Q13;
-      if (country.includes("Germany")) {
-        postalCodeList = JSON.parse(postalCodeGermany); 
-      }
-      else if (country.includes("Austria")) 
-      {
-        postalCodeList = JSON.parse(postalCodeAustria); //Austria
-      }
-    break;  
-
-
+   
     default:
       postalCodeList = JSON.parse(postalCodeAustria); //Austria
       break;
@@ -64,18 +44,14 @@ function save_postal_code_value(question, value) {
   console.log("value:", value);
 
   switch (question) {
-    case "Core_Q6_3":
-      api.fn.answers({Core_Q6_3_PostalCode: value}); 
+    case "F7_4":
+      api.fn.answers({F7_4_PostalCode: value}); 
       break;
-    case "Core_Q6_4":
-      api.fn.answers({Core_Q6_4_PostalCode: value}); 
+
+    case "F13_1":
+      api.fn.answers({F13_1_PostalCode: value}); 
       break;
-    case "Core_Q7_2":
-      api.fn.answers({Core_Q7_2_PostalCode: value}); 
-      break;
-    case "Core_Q14":              
-      api.fn.answers({Core_Q14_PostalCode: value}); 
-      break;
+
     default:
       break;
   }
