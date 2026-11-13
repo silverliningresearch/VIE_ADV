@@ -7,6 +7,7 @@ function load_postal_codes_list(question) {
   postalCodeList = [];
 
   switch (question) {
+    case "F7_4":    
       if (api.fn.answers().F7_4_2_text.includes("Germany")) {
         postalCodeList = JSON.parse(postalCodeGermany); 
       }
