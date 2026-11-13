@@ -18,7 +18,7 @@ function aui_item_in_list_found(list, item) {
       }
     }
   }
-  //$('.rt-btn.rt-btn-next').hide(); 
+  $('.rt-btn.rt-btn-next').hide(); 
   return false;
 }
 
@@ -99,7 +99,7 @@ function aui_show_external_search_box(searchQuestion, defaultValue) {
   
   $('.external-search-box').show(); 
 
-  // $('.rt-btn.rt-btn-next').hide(); 
+  $('.rt-btn.rt-btn-next').hide(); 
 }
 
 function aui_update_current_search_list(term){
