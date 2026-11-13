@@ -7,8 +7,7 @@ function load_postal_codes_list(question) {
   postalCodeList = [];
 
   switch (question) {
-    case "F7_4":
-      if (api.fn.answers().Core_Q6_3a == 3 ) {
+      if (api.fn.answers().F7_4_2_text.includes("Germany")) {
         postalCodeList = JSON.parse(postalCodeGermany); 
       }
       else
@@ -17,7 +16,7 @@ function load_postal_codes_list(question) {
       }
       break;
     case "F13_1":
-      if (api.fn.answers().Core_Q6_4a == 3 ) {
+      if (api.fn.answers().F13_1_text.includes("Germany")) {
         postalCodeList = JSON.parse(postalCodeGermany); 
       }
       else
