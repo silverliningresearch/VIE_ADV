@@ -38,8 +38,9 @@
                 document.getElementById("selectedAddress").innerHTML = "Your selection: Country = " + country + "; Postal Code = " + postal_code + " " + locality + " " + city;
                 var address = document.getElementById("selectedAddress").innerHTML;
 
-                if (current_map_question == "Q242") {
-                  api.fn.answers({Q242_postalcode: postal_code + " - " + locality + ", " + city + ", " + country});
+                if (current_map_question == "F7_4") {
+                  api.fn.answers({F7_4_PostalCode: postal_code + " - " + locality + ", " + city});
+                  api.fn.answers({F7_4_CountryCode: country});                  
                 } 
                 else if (current_map_question == "Q244") 
                 {
@@ -115,7 +116,7 @@
   }
 
   function initAutocomplete() {
-    const myLatlng = { lat: 47.5896, lng: 7.5299};
+    const myLatlng = { lat: 48.1103, lng: 16.5697};
 
     //const map = new google.maps.Map(document.getElementById("map"), {
     map = new google.maps.Map(document.getElementById("map"), {      

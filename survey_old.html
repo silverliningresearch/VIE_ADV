@@ -12,8 +12,6 @@
     <link rel="stylesheet" type="text/css" href="https://files.survalyzer.eu/public/dependency/devextreme/latest/css/dx.light.css" />
     <link rel="stylesheet" type="text/css" href="https://files.survalyzer.eu/public/dependency/styleguide/latest/assets/default/rt-theme.min.css" />
 
-    <link href="css/map-search-box.css" rel ="stylesheet" type="text/css" />
-    <link href="css/postal-code-search-box.css" rel ="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -32,8 +30,7 @@
     <script src="scripts/postal_code_search.js"></script>
 
     <script src="scripts/auto_complete_ui.js"></script>
-    <script src="scripts/maps_search.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://files.survalyzer.eu/public/dependency/jquery/latest/jquery.min.js"></script>
@@ -43,21 +40,6 @@
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    
-    <div id="selectedAddress"></div>
-    <input
-      id="pac-input"
-      class="controls"
-      type="text"
-      placeholder="Search Box"
-    />
-
-    <div id="map">
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyvj3Xxekjs1ZGpv5mtwkblHhmjdPd2SA&callback=initAutocomplete&libraries=places&v=weekly"
-        defer> 
-      </script>
-    </div>
 
     <script>
         window.addEventListener('load', function () {
@@ -67,8 +49,7 @@
             
             switch (api.fn.getCurrentPageIndex()) {
               case 3:
-                // show_flight_search_box("F2"); //flight Number
-                showGoogleMaps("Q242");
+                show_flight_search_box("F2"); //flight Number
                 break;
               case 4:
                 show_airport_search_box("F3"); //Final Airport
@@ -89,8 +70,6 @@
 
               default:
                 aui_hide_external_search_box();
-                hideGoogleMaps();
-
                 break;
             }
           }    
